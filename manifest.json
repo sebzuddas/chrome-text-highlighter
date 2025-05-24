@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Bold Highlighter",
+  "version": "1.0",
+  "description": "Makes highlighted text bold",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
