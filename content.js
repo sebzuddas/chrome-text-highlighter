@@ -108,26 +108,3 @@ if (document.readyState === 'loading') {
     // DOM already loaded
     setTimeout(init, 100);
 }
-
-// Add a test element to verify the script is working
-const testElement = document.createElement('div');
-testElement.textContent = 'Bold Highlighter: Select text to see it become bold';
-testElement.style.cssText = `
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: var(--bg-color, #ffffff);
-    color: var(--text-color, #000000);
-    border: 2px solid #4CAF50;
-    padding: 10px;
-    z-index: 2147483647;
-    max-width: 300px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    border-radius: 4px;
-    font-size: 14px;
-    pointer-events: none;
-`;
-
-document.body.appendChild(testElement);
-console.log('Bold Highlighter extension: Test element added');
