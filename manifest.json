@@ -1,13 +1,40 @@
 {
   "manifest_version": 3,
   "name": "Bold Highlighter",
-  "version": "1.0",
-  "description": "Makes highlighted text bold",
-  "permissions": ["activeTab"],
+  "version": "1.0.0",
+  "description": "Enhance your reading experience by making highlighted text bold and more prominent.",
+  "author": "Sebastiano Zuddas",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Bold Highlighter",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "homepage_url": "https://github.com/sebzuddas/bold-highlighter",
+  "minimum_chrome_version": "88"
 }
