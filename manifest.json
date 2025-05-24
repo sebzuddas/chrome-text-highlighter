@@ -2,12 +2,27 @@
   "manifest_version": 3,
   "name": "Bold Highlighter",
   "version": "1.0",
-  "description": "Makes highlighted text bold",
-  "permissions": ["activeTab"],
+  "description": "Makes highlighted text bold or applies bionic reading style",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Bold Highlighter",
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
-  ]
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
 }

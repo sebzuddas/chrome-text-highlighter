@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bold Highlighter</title>
+    <style>
+        body {
+            width: 200px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .toggle-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .toggle-option {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .toggle-option:hover {
+            background-color: #f0f0f0;
+        }
+        .toggle-option input[type="radio"] {
+            margin-right: 8px;
+        }
+        .toggle-option.active {
+            background-color: #e3f2fd;
+            font-weight: bold;
+        }
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 8px 0;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 12px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <h3>Highlight Mode</h3>
+        <label class="toggle-option" id="option-normal">
+            <input type="radio" name="mode" value="normal" checked>
+            Normal Mode
+        </label>
+        <label class="toggle-option" id="option-bionic">
+            <input type="radio" name="mode" value="bionic">
+            Bionic Reading
+        </label>
+        <div class="divider"></div>
+        <div class="status" id="status">Active: Normal Mode</div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
