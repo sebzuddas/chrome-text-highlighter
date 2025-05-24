@@ -48,7 +48,13 @@ This extension does not:
 
 ## Support
 
-For support or to report issues, please [open an issue](https://github.com/yourusername/bold-highlighter/issues) on GitHub.
+For support or to report issues, please [open an issue](https://github.com/sebzuddas/bold-highlighter/issues) on GitHub.## Demo
+
+### Before
+![Without Bold Highlighting](images/without_bold.png)
+
+### After
+![With Bold Highlighting](images/with_bold.png)
 
 ## License
 
